@@ -1,0 +1,45 @@
+
+
+<p id="notice"><%= notice %></p>
+<div id="itemsContainer">
+<p>
+  <strong>Order date:</strong>
+  <%= @order.order_date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @order.user.email %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @order.status %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
+</div>
+
+<br><br>
+
+<div id="itemsContainer">
+  <h1>Products for this order are </h1>
+  <table id="customers">
+    <% @orderitems.each do |orderitem| %>
+     <td><%= orderitem.id %></td>
+    <tr><td><%= orderitem.title %></td>
+    
+   <% if @order.user.email == @user.email %>
+<% else %>
+   
+<h1>You did not place this order</h1>
+<% end %>
+ 
+    
+    </tr>
+      
+      <% end %>
+    
+  </table>
+  </div>

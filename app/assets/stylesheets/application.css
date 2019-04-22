@@ -1,0 +1,255 @@
+
+.headSec {
+    min-height:10px;
+    background: url("/assets/back/logo.png");
+    background-repeat: no-repeat;
+    background-color: #A4CA66;;
+    width: 100%;
+    margin-bottom:10px;
+    overflow: auto;
+    
+}
+
+.headSec h1 {
+    color: #ffffff;
+    font-size: 60px;
+    padding: 5px;
+    text-align: center;
+    
+}
+
+ul { 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  #FFD553;    
+    
+}
+
+li {float: left;}
+
+li a {
+    display: block;
+    color:  black;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+
+.mainCont { 
+    
+    margin: auto;
+    width:80%;
+    border: 3px solid #b3e0ff;
+    padding: 10px;
+    text-align: center;
+    background-color: #FEFBE8;
+}
+
+.plastic {width: 70%;}
+.welcomeIm {width: 100%;}
+.nappy {width: 100%;}
+.diaper {width: 40%;}
+.hanging{width:50%}
+.nappyshop{width:70%}
+.mountain{width:100%}
+.how{width:50%}
+.all{width:50%}
+.pads{width:50%}
+.single{width:50%}
+
+.foot {
+	background-color: #A4CA66;
+	width: 100%;
+	overflow: hidden;
+	text-align:center;
+}
+
+.foot a {
+	 padding-top: 50px;
+}
+
+.foot p {
+	padding: 0;
+	font-size: 15px;
+	
+}
+
+
+.container {
+      background: url("/assets/back/leaves.png");
+      background-repeat: repeat;
+      font-family: Comic Sans MS, Tahoma; Arial; sans-serif;
+      font-size: 18px;
+      overflow: auto;
+}
+
+.mapouter{position:relative;
+text-align:center;height:500px;width:600px;}
+
+.gmap_canvas {
+margin:0; 
+position:absolute; 
+overflow:hidden;
+background:none!important;
+left: 50%;
+margin-right: -50%;
+transform: translate(-50%, -50%) 
+height:500px;
+width:600px;}
+
+#itemsContainer {
+    width: 100%;
+    text-align: center;
+    
+    
+}
+
+
+#itemsContainer h1 {
+   display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+    
+}
+
+
+.itemhols {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 22%;
+    padding:10px;
+    min-height: 300px;
+   
+}
+
+
+.itemhols h1 {
+   display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px
+    
+}
+
+
+.itemhols p {
+   display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px
+    
+}
+
+
+
+.itemholsIm {
+    width: 30%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+    
+}
+
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+@media screen and (max-width: 740px) {
+		ul{
+			width:100%;
+			margin-bottom: 10px;
+        list-style: none;
+        margin: 0 auto;
+		padding-left: 0;
+    }
+	ul li {
+		text-align: center;
+		margin-left: 0 auto;
+		width: 100%;
+		border-top: 1px solid;
+		border-bottom:1px solid;
+		border-right:0px solid;
+		border-left: 0px solid;
+	}
+	ul li a {
+		padding: 8px 0;
+		font-size: 16px;
+	}
+	
+	@media screen and (max-width: 740px) {
+    .mapouter {
+       display: none;
+    }
+}

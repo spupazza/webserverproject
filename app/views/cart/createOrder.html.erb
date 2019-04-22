@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+<div id="itemsContainer">
+
+<h2>Thank You</h2>
+
+<p>You have just placed an order <%=@orderReg.id %></p>
+
+</div>
+
+<table id="customers">
+    <tr>
+        
+       <% @orders.limit(1).order(id: :desc).each do |order| %>   
+       <td>The placed order reference is <%= order.id %></td>
+               <% end %>
+    </tr>
+</table>    
+    
+    
+<table id="customers">
+     <% @total = 0 %>
+    <% @orderitems.each do |id,quantity| %>
+      <tr>
+        <% item = Orderitem.find_by_id(id) %>
+       
+        <td><%= item.title %></td>
+        <td><%= item.quantity %></td>
+       <td><%=number_to_currency(item.price, :unit => "€")%></td> 
+       <td><%= number_to_currency(item.quantity * item.price, :unit => "€") %></td>
+       </tr>
+       
+       <% tot = (item.quantity * item.price)%>
+     
+     
+      <% @total += tot %>
+      
+      </tr>
+    <% end %>
+    
+    
+    <tr>
+        
+       <td>Order Total: &euro; <%= @total %></td>
+        <% shipping = 10 %>
+         <% @overall = shipping + @total%>
+     </tr>
+     <tr>
+          <td>Shipping &euro;10</td>
+          <td>Your total amount is: &euro; <%= @overall %></td>
+      </tr>
+      <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+      <script>paypal.Buttons().render('body');</script>
+    
+      <% end %>
+</table>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Zerostore</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+       <header class="headSec">
+      <h1>Zero Waste Baby Shop</h1>
+      
+      <ul>
+        <li><%= link_to "Home",  "/" %></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Instructions", instructions_path %></li>
+        <li><%= link_to "Products", "/items" %></li>
+        <li><%= link_to "Contact", contact_path %></li>
+          <li><%= link_to "Cart", "/cart" %></li>
+          <li><%= link_to "View Orders", orders_path  %></li>
+          
+        
+        <% if user_signed_in? %>
+                 <li><a href="#">Hi <%= current_user.email %></a></li>
+                   <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+                 <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+          <% else %>
+                   <li><%= link_to 'Register', new_user_registration_path %></li> 
+                 <li><%= link_to 'Sign in', new_user_session_path %></li>
+          <% end %>
+          
+         <% if admin_signed_in? %> 
+          <li><a href="#">Hi <%= current_admin.email %></a></li>
+        <li><%= link_to "Admin Logout",  destroy_admin_session_path, :method => :delete %></li>
+        <% else %>
+         
+        <li><%= link_to "Admin Login", new_admin_session_path %></li>
+        <% end %>
+
+   
+<%= form_tag("/search", :method => "post") do %>
+<%= label_tag(:q, "Search for:") %>
+<%= text_field_tag(:q) %>
+<%= submit_tag("Search") %>
+<% end %>
+
+        
+      </ul>
+    </header>
+
+  
+<div class="container">
+  
+  
+    <%= yield %>
+    </div>
+ <footer class="foot">
+
+  <p><b>Contact Us or Visit us:</b></p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Dublin City Centre</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00353 018904452</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> zerowastebabyshop@gmail.com</p>
+    
+
+    </div>
+</footer>
+ 
+
+  </body>
+</html>

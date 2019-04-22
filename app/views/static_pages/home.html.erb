@@ -1,0 +1,40 @@
+<% provide(:title, "Home") %>
+
+  
+   <div class="mainCont">
+<%= image_tag("blackbags.jpeg", alt: "Blackbags", :class => "welcomeIm") %>    
+    
+    
+<h1>Welcome to Zero Waste Baby shop!</h1>
+<p>Here you will find an overview of the disposable nappies pollution problem, the impact on our planet and a list of solutions to save Mother Nature.</p>
+
+<p>An estimated three billion nappies are thrown away every year in the UK, accounting for 2-3% of all household waste.</p>
+
+<%= image_tag("nappypollution.png", alt: "Nappypollution", :class => "plastic") %>  
+
+<p>Disposable nappies are made out of non-recyclable plastic, which ends in landfill or in incinerators. Either ways, they are highly pollutant because they slowly degrade out in the sun and in the air (around 500 years) or produce greenhouse gases for burning them.</p>
+<p>The first disposable nappy was created in 1948, which means that it is still out in the environment. By the time they are potty trained, a baby could have used 4,000 to 6,000 disposable nappies, or 20 to 30 reusable nappies.</p>
+
+<%= image_tag("diaper.jpg", alt: "Diaper", :class => "diaper") %>
+<center>
+<p><ul>They are the common choice for the modern society, but there are a lot of disadvantages in using them:
+<br><br>
+
+<li>- Fecal matter that directly enters in contact with landfill, will contaminate the ground water and
+spread diseases;</li>
+
+<li>- They require a large volume of natural resources for producing them such as pulp from trees,
+paper, plastic, oils. All material that is non-renewable and that they are running out;</li>
+
+<li>- High energy is used both for producing and for burning them;</li>
+
+<li>- A dangerous chemical is used in all nappies that prevents leaking from it is Sodium Polycrylate,
+which is very toxic if inhaled or ingested.</li></ul></p>
+
+</center>
+<h4>The solution for this problem is for people to use re-usable nappies 
+instead of disposable ones.</h4>
+<%= image_tag("nappydry.gif", alt: "Nappy", :class => "nappy") %>
+  <p>Find out more on how to use them <%= link_to "Instructions", "instructions_path" %>><b>here</b> and a list of available re-usable nappies and other re-usable products <%= link_to "Products", "products_path" %><b>here</b></p>
+ </div>
+    <%= yield %>
